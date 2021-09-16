@@ -37,49 +37,68 @@ export default function App() {
 
   return (
     <div className="App">
-      <h1> GoodBooks </h1>
-      <p style={{ fontSize: "smaller" }}>
+    <header>
+    <h1  className="header">Good Books</h1>
+    <p style={{ fontSize: "smaller" }}>
         Checkout my favorite books. Select a genre to get started
       </p>
+      </header>
 
+<main>
       <div>
         {Object.keys(bookDB).map((genre) => (
           <button
             onClick={() => genreClickHandler(genre)}
-            style={{
-              cursor: "pointer",
-              background: "#E5E7EB",
-              borderRadius: "0.5rem",
-              padding: "0.5rem  1rem",
-              border: "1px solid black",
-              margin: "1rem 0.3rem"
-            }}
+            className="btn-check"
+            key={genre}
           >
             {genre}
           </button>
         ))}
       </div>
-      <hr />
-      <div style={{ textAlign: "left" }}>
-        <ul style={{ paddingInlineStart: "0" }}>
+        <hr style={{ width: "80%",marginLeft:"10%"}}/>
+      <div>
+        <ul>
           {bookDB[selectedGenre].map((book) => (
             <li
               key={book.name}
               style={{
                 listStyle: "none",
                 padding: "1rem",
-                width: "70%",
+                width: "100%",
                 margin: "1rem 0rem",
                 borderRadius: "0.5rem"
               }}
             >
               {" "}
-              <div style={{ fontSize: "larger" }}> {book.name} </div>
-              <div style={{ fontSize: "smaller" }}> {book.rating} </div>
+              <div style={{ fontSize: "larger",textAlign: "center" }}> {book.name} </div>
+              <div style={{ fontSize: "smaller",textAlign: "center" }}> {book.rating} </div>
             </li>
           ))}
         </ul>
       </div>
+      </main>
+
+      <footer className="footer container">
+    <div className="footer-header">Connect with me on social media</div>
+    <ul className="social-links list-non-bullet">
+        <li className="list-item-inline">
+            <a className="link" href="https://www.linkedin.com/in/rodriguescarson">
+                Linkedin
+            </a>
+        </li>
+        <li className="list-item-inline">
+            <a className="link" href="https://github.com/rodriguescarson">
+                Github
+            </a>
+        </li>
+        <li className="list-item-inline">
+            <a className="link" href="https://twitter.com/carsonmarz">
+                twitter
+            </a>
+        </li>
+    </ul>
+</footer>
     </div>
   );
 }

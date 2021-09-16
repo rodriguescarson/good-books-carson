@@ -1,10 +1,112 @@
-.App {
-  max-width: 600px;
-  margin: auto;
-  padding: 2rem;
+@import url("https://fonts.googleapis.com/css2?family=Megrim&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #F59E0B;
+  --dark-gray: #6B7280;
+  --off-white:#F3F4F6;
 }
 
 body {
-  font-family: "Lato", sans-serif;
-  background-color: #efefef;
+  font-family: "Work Sans", sans-serif;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+
+}
+
+/* Header */
+
+header {
+  padding: 1rem;
+  background-color: var(--primary-color);
+  color: #fff;
+}
+
+header h1 {
+  font-family: "Megrim", cursive;
+  text-align: initial;
+}
+
+main {
+  margin-top: 10vh;
+height: 65vh;
+}
+
+main h1 {
+  margin: 1rem;
+}
+
+.btn-check {
+  background: var(--primary-color);
+  border: none;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 0.5rem;
+  font-size: large;
+  cursor: pointer;
+  outline: #fff;
+  /* margin: 1rem auto; */
+  /* display: block; */
+  margin: 1rem 0.3rem;
+}
+  
+.footer {
+  background-color: var(--primary-color);
+  padding: 2rem 1rem;
+  text-align: center;
+  color: white;
+  border-top-right-radius: 1rem;
+  
+}
+
+.footer .link {
+  color: white;
+}
+
+.footer .footer-header {
+  font-weight: bold;
+  font-size: large;
+}
+
+.footer ul {
+  padding-inline-start: 0px;
+}
+/* list */
+
+.list-non-bullet {
+  list-style: none;
+}
+
+.list-item-inline {
+  display: inline;
+  padding: 0rem 0.5rem;
+}
+
+
+/* container */
+container {
+  padding: 0rem 1rem;
+}
+
+.container-center {
+  max-width: 600px;
+  margin: auto;
+}
+
+.link {
+  text-decoration: none;
+  padding: 0. 1rem;
 }
